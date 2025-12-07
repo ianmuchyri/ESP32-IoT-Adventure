@@ -48,9 +48,8 @@ Breadboard:
 Pin Assignments:
 ================
 GPIO 23 → Red LED
-GPIO 22 → Yellow LED
-GPIO 21 → Green LED
-GPIO 19 → Blue LED
+GPIO 22 → Green LED
+GPIO 21 → Blue LED
 GND → Breadboard ground rail
 
 
@@ -66,8 +65,8 @@ Safety Notes:
 Wiring Checklist:
 =================
 □ ESP32 GND connected to breadboard GND rail
-□ All 4 LEDs inserted with correct polarity
-□ All 4 resistors connected from LED cathodes to GND
-□ All 4 GPIO wires connected to LED anodes
+□ All 3 LEDs inserted with correct polarity
+□ All 3 resistors connected from LED cathodes to GND
+□ All 3 GPIO wires connected to LED anodes
 □ No short circuits between adjacent pins
 □ All connections firm and secure
