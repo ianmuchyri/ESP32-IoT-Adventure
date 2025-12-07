@@ -1,0 +1,72 @@
+ESP32 LED Circuit Diagram - Blog 2
+====================================
+
+ASCII Circuit Diagram:
+
+ESP32 NodeMCU-32S                    Breadboard
+┌─────────────┐                      
+│             │                      
+│   GPIO 23 ──┼──────────┐          
+│             │          │          
+│   GPIO 22 ──┼────────┐ │          
+│             │        │ │          
+│   GPIO 21 ──┼──────┐ │ │          
+│             │      │ │ │          
+│             |      │ │ │          
+│             │      │ │ │          
+│             │      │ │ │          
+│       GND ──┼─┐    │ │ │          
+│             │ │    │ │ │          
+└─────────────┘ │    │ │ │          
+                │    │ │ │          
+                │    │ │ └──→ LED1 (Red) ──→ 220Ω ──┐
+                │    │ └────→ LED3 (Green) ─→ 220Ω ──┤
+                │    └──────→ LED4 (Blue) ──→ 220Ω ──┤
+                │  
+                │                                     │
+                └─────────────────────────────────────┘
+                              (Common Ground)
+
+
+Component Details:
+==================
+
+LEDs:
+- Anode (long leg, +) connects to GPIO pin
+- Cathode (short leg, -) connects to resistor
+
+Resistors:
+- 220Ω (Red-Red-Brown-Gold)
+- One end to LED cathode
+- Other end to ground rail
+
+Breadboard:
+- Blue rail = Ground (GND)
+- Red rail = Not used in this project
+- Terminal strips connect rows (a-e, f-j)
+
+Pin Assignments:
+================
+GPIO 23 → Red LED
+GPIO 22 → Green LED
+GPIO 21 → Blue LED
+GND → Breadboard ground rail
+
+
+Safety Notes:
+=============
+✓ Always use current-limiting resistors
+✓ Check LED polarity before powering
+✓ ESP32 GPIO max current: 12mA (we use ~10mA)
+✓ Total GPIO current limit: 40mA (we use ~40mA max)
+✓ Never connect LED directly to GPIO without resistor!
+
+
+Wiring Checklist:
+=================
+□ ESP32 GND connected to breadboard GND rail
+□ All 3 LEDs inserted with correct polarity
+□ All 3 resistors connected from LED cathodes to GND
+□ All 3 GPIO wires connected to LED anodes
+□ No short circuits between adjacent pins
+□ All connections firm and secure
