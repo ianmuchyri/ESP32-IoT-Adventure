@@ -94,4 +94,35 @@ void loop()
   digitalWrite(LED_BUILTIN, LOW);
 
   delay(1000);
+
+  // 🥉 Bronze Challenge: Traffic Light
+  Serial.println("\n🥉 Bronze Challenge: Traffic Light");
+  for (int i = 0; i < 3; i++)
+  {
+    digitalWrite(leds[0], HIGH);
+    digitalWrite(leds[2], LOW);
+    delay(3000);
+    digitalWrite(leds[0], LOW);
+    digitalWrite(leds[2], HIGH);
+    delay(1000);
+    digitalWrite(leds[2], LOW);
+    digitalWrite(leds[1], HIGH);
+    delay(3000);
+    digitalWrite(leds[1], LOW);
+    digitalWrite(leds[2], HIGH);
+    delay(1000);
+  }
+
+  // 🥈 Silver Challenge: Police Lights
+  Serial.println("\n🥈 Silver Challenge: Police Lights");
+  for (int i = 0; i < 100; i++)
+  {
+    digitalWrite(leds[0], HIGH);
+    delay(200);
+    digitalWrite(leds[0], LOW);
+    digitalWrite(leds[2], HIGH);
+    delay(200);
+    digitalWrite(leds[2], LOW);
+    delay(200);
+  }
 }
